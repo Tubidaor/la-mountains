@@ -10,6 +10,7 @@
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
+  overflow: hidden;
 }
 .logo {
   height: 40px;
@@ -49,7 +50,7 @@ h1 {
   font-family: "Bebas Neue";
   color: transparent;
 }
-footer {
+.sticky-footer {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -214,6 +215,10 @@ footer {
 }
 .team-ul li {
   color: #b0b4be;
+  margin-top: -6px;
+  height: 100%;
+  padding: 2px 20px 6px 20px;
+  
 }
 .mount-selected {
   color: #414f6b !important;
@@ -229,6 +234,9 @@ footer {
 .mount-sched {
   background-color: #f0f2f5;
   width: 300px;
+  margin-left: 15%;
+  margin-top: 100px;
+  padding-bottom: 20px;
 }
 table {
   margin-left: auto;
@@ -240,4 +248,59 @@ table {
   color: #414f6b;
   margin-left: 36px;
   font-size: 2rem;
+}
+.climb-bg {
+  background-image: url('./assets/3rdBackground.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 70%;
+  padding-top: 1px;
+  margin-top: 30px;
+}
+.sched-footer {
+  height: 15%;
+  width: 100%;
+  background-color: #414f6b;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.sched-foot-img {
+  height: 50%;
+  width: auto;
+  margin-top: 2.5%;
+  padding-left: 10%;
+}
+.copyright {
+  color: #63769d;
+  font-family: "Lato";
+  margin-top: 3.3%;
+  padding-right: 10%;
+}
+.climb-heading-img {
+  height: 70%;
+  width: auto;
+  display: block;
+  margin-top: 2%;
+  margin-left: 80px
+}
+.climb-h2 {
+  color: transparent;
+}
+.climb-p {
+  align-self: center;
+  margin-left: 30px;
+  font-size: 1rem;
+  font-family: "Lato";
+  width: 80%;
+  margin-right: 100px;
+}
+.team-header-con {
+  height: 20%;
+}
+.team-header {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }

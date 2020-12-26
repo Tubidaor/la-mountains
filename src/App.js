@@ -5,6 +5,8 @@ import photo1 from './assets/photo1.jpg'
 import photo2 from './assets/photo2.jpg'
 import photo3 from './assets/photo3.jpg'
 import photo4 from './assets/photo4.jpg'
+import thirdPageFooter from './assets/3rdPageFooter.png'
+import climbHeading from './assets/climbHeading.png'
 
 export default class App extends Component {
   
@@ -87,7 +89,7 @@ export default class App extends Component {
               LOS ANGELES MOUNTAINS
             </h1>
           </header>
-          <footer>
+          <footer className="sticky-footer">
             <div className="foot-wrapper">
               <div className="logo-and-la">
                 <img className="foot-logo" src={logo} alt="ct-logo"/>
@@ -151,11 +153,12 @@ export default class App extends Component {
         </section>
         <section className="team" id="team">
           <div className="team-header-con">
-            <header>
+            <header className="team-header">
               <h2 className="climb-h2">
                 02. Climb
               </h2>
-              <p>
+              <img className="climb-heading-img" src={climbHeading}/>
+              <p className="climb-p">
                 Cras scelerisque id quam sed dignissim Pellentesque urna nunc,
                 gravida quis hendrerit ac, tristique ut quam. Vivamus suscipit
                 dignissim tortor nec congue.
@@ -172,6 +175,8 @@ export default class App extends Component {
                   </li>
                 </ul>
               </nav>
+                  </header>
+                  </div>
               <div className="climb-bg">
                 <div className="mount-sched">
                   <h3 class="sched-h3">Schedule</h3>
@@ -277,10 +282,10 @@ export default class App extends Component {
                   }
                 </div>
               </div>
-
-            </header>
-          </div>
-
+          <footer className="sched-footer">
+            <img className="sched-foot-img" src={thirdPageFooter} alt="LA mountains footer image."/>
+            <span className="copyright">COPYRIGHT 2016. ALL RIGHTS RESERVED.</span>
+          </footer>
         </section>
       </div>
     );
