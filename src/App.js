@@ -22,6 +22,8 @@ export default class App extends Component {
   handlePicClick = (index, picId, bubbleId) => {
     const bubbles = document.getElementsByClassName("bubble")
     const pics = document.getElementsByClassName("side-pic")
+    let close = document.getElementById('close')
+    close.style.display = "block"
 
     for(let i = 0; i < Object.keys(bubbles).length; i++) {
       if(Object.values(bubbles[i])[1].id == bubbleId) {
@@ -63,6 +65,10 @@ export default class App extends Component {
     this.setState({mountId})
   }
 
+  handleClose = () => {
+    let close = document.getElementById('close')
+    close.style.display = "none"
+  }
   render() {
     return (
       <div className="App">
@@ -129,7 +135,14 @@ export default class App extends Component {
             Pellentesque urna nunc, gravida quis hendrerit ac, tristique ut quam.
             Vivamus suscipit dignissim tortor nec congue. 
           </p>
-          <div className="main-pic-con">
+          <div className="main-pic-con hide-pic" id="close" onClick={e => this.handleClose()}>
+            <div className="close-pic">
+              <div className="bar bar1">
+              </div>
+              <div className="bar bar2">
+              </div>
+            </div>
+
             {this.state.index != null && <img className="main-pic" src={this.state.pics[this.state.index]}></img>}
           </div>
           <div className="carousel">
